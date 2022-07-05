@@ -30,6 +30,13 @@ homeContactBtn.addEventListener("click", () => {
   scrollIntoView("#contact");
 });
 
+// 스크롤 시 Home 화면 투명도 적용
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
 // Moving Scroll View 함수
 function scrollIntoView(pID) {
   const scrollTo = document.querySelector(pID);
