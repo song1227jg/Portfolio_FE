@@ -101,6 +101,7 @@ p {
   padding: 16px;
   background-color: transparent;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar__dark {
@@ -322,6 +323,7 @@ p {
   font-size: var(--font-regular);
   padding: 8px 48px;
   width: 275px;
+  margin-bottom: 5px;
 }
 
 .category__btn.active,
