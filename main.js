@@ -37,6 +37,21 @@ document.addEventListener("scroll", () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+// 스크롤 시 "Arrow up" 버튼 활성화/비활성화
+const arrowUp = document.querySelector(".arrow__up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
+// Arrow-up 버튼 클릭 시 화면 이동
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#home");
+});
+
 // Moving Scroll View 함수
 function scrollIntoView(pID) {
   const scrollTo = document.querySelector(pID);
