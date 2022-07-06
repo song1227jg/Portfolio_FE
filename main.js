@@ -9,6 +9,8 @@ document.addEventListener("scroll", () => {
   } else {
     navbar.classList.remove("navbar__dark");
   }
+
+  navbarMenu.classList.remove("open");
 });
 
 // 버튼 클릭 시 스크롤 위치 변경
@@ -21,7 +23,15 @@ navbarMenu.addEventListener("click", (event) => {
     return;
   }
 
+  navbarMenu.classList.remove("open");
+
   scrollIntoView(link);
+});
+
+// navbar 토글버튼 처리
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // "Contact me" Button 클릭 시 처리
