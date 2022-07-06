@@ -520,6 +520,15 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 28px;
+    --font-medium: 16px;
+    --font-regular: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+  }
+
   .navbar__toggle-btn {
     display: block;
   }
@@ -541,12 +550,18 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .skillset {
@@ -555,6 +570,8 @@ p {
 
   .category__btn {
     margin-bottom: 5px;
+    width: 180px;
+    padding: 8px 24px;
   }
 
   .project {
