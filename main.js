@@ -98,5 +98,5 @@ workBtnContainer.addEventListener("click", (e) => {
 // Moving Scroll View 함수
 function scrollIntoView(pID) {
   const scrollTo = document.querySelector(pID);
-  scrollTo.scrollIntoView({ behavior: "smooth", block: "center" });
+  scrollTo.scrollIntoView({ behavior: "smooth", block: "start" });
 }

@@ -179,6 +179,7 @@ p {
 /* Section Common */
 .section {
   padding: 50px;
+  padding-top: 80px;
   text-align: center;
   margin: auto;
 }
@@ -531,6 +532,9 @@ p {
 
   .navbar__toggle-btn {
     display: block;
+    font-size: 24px;
+    top: 6px;
+    right: 6px;
   }
 
   #navbar {
@@ -552,6 +556,7 @@ p {
 
   .section {
     padding: 16px;
+    padding-top: 32px;
   }
 
   .about__majors {
@@ -578,8 +583,28 @@ p {
     flex-grow: 1;
   }
 
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .testimonial_avatar {
     width: 125px;
     height: 125px;
+    margin: 0;
+  }
+
+  .testimonial_avatar:nth-child(even),
+  .testimonial_avatar:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .testimonial_avatar:nth-child(odd) {
+    margin-right: 0;
+  }
+
+  .testimonial_speech_bubble {
+    order: 1;
   }
 }
