@@ -63,6 +63,15 @@ workBtnContainer.addEventListener("click", (e) => {
     return;
   }
 
+  // 버튼 active 상태 변경
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected");
+
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("selected");
+
+  // 버튼 클릭 시 필터 및 애니매이션 적용
   projectContainer.classList.add("anim-out");
   setTimeout(() => {
     projects.forEach((project) => {
